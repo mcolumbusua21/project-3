@@ -27,3 +27,14 @@ yelpREST("/businesses/search", {
       console.log("Name: ", b.name)
     })
   })
+  yelpREST("/businesses/9QFiF_YBCKvWsUu50G_yxg/reviews").then(({ data }) => {
+    console.log(data)
+  })
+  yelpREST("/autocomplete", {
+    params: {
+      location: "pdx",
+      text: "stumpt",
+    },
+  }).then(({ data }) => {
+    console.log(data)
+  })
