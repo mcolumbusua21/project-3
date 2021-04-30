@@ -27,7 +27,7 @@ With all that in mind, dispensaries offering a variety of goods and services are
 
 ## Deployment Link
 
-TBD
+THC ;)
 
 ## Wireframe
 
