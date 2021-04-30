@@ -13,6 +13,7 @@ Use and possession of recreational and medicinal marijuana has recently become l
 <br>
 With all that in mind, dispensaries offering a variety of goods and services are increasingly opening. Whether you are new to the world of cannabis or are experienced, this is the app for you. You can search for a variety of things that will help you make the best and most informed decision.
 
+
 ## Table of Contents 
 
 * [Deployment Link](#deployment-link)
@@ -29,9 +30,11 @@ With all that in mind, dispensaries offering a variety of goods and services are
 
 THC ;)
 
+
 ## Wireframe
 
-[Figma](https://www.figma.com/file/7RZH5TiqERMhoe66QA451y/Wireframing-in-Figma?node-id=111%3A730)
+[Figma](https://www.figma.com/file/7RZH5TiqERMhoe66QA451y/Wireframing-in-Figma?node-id=111%3A730)<br>
+![Screen Shot 2021-04-30 at 1 56 00 PM](https://user-images.githubusercontent.com/78819536/116753802-85488400-a9bc-11eb-9757-5f7de4b4fe9e.png)
 
 ## License
 
