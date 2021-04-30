@@ -2,7 +2,7 @@
 ___
 
 
-# ${data.title}
+
 ${license}
 
 ## Description
