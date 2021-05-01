@@ -12,6 +12,10 @@ Search for dispensaries around your current location. Useful if you are looking 
 Use and possession of recreational and medicinal marijuana has recently become legal in several states across the country. Furthermore, there are only a handful of states where marijuana is completely illegal. With changes in laws and shifting perception, acceptance of cannabis use is increasing. In addition, scientific research is ongoing regarding the benefits of using cannabis. 
 <br>
 With all that in mind, dispensaries offering a variety of goods and services are increasingly opening. Whether you are new to the world of cannabis or are experienced, this is the app for you. You can search for a variety of things that will help you make the best and most informed decision.
+<<<<<<< HEAD
+=======
+
+>>>>>>> b916eac970a122964bf0702e0ed8f567dc04b0c7
 
 ## Table of Contents 
 
@@ -28,10 +32,15 @@ With all that in mind, dispensaries offering a variety of goods and services are
 ## Deployment Link
 
 THC ;)
+<<<<<<< HEAD
+=======
+
+>>>>>>> b916eac970a122964bf0702e0ed8f567dc04b0c7
 
 ## Wireframe
 
-[Figma](https://www.figma.com/file/7RZH5TiqERMhoe66QA451y/Wireframing-in-Figma?node-id=111%3A730)
+[Figma](https://www.figma.com/file/7RZH5TiqERMhoe66QA451y/Wireframing-in-Figma?node-id=111%3A730)<br>
+![Screen Shot 2021-04-30 at 1 56 00 PM](https://user-images.githubusercontent.com/78819536/116753802-85488400-a9bc-11eb-9757-5f7de4b4fe9e.png)
 
 ## License
 
