@@ -1,9 +1,9 @@
 import React, { createContext, useReducer, useContext } from "react";
 import {
-  SET_CURRENT_POST,
-  REMOVE_POST,
-  UPDATE_POSTS,
-  ADD_POST,
+  // SET_CURRENT_POST,
+  // REMOVE_POST,
+  // UPDATE_POSTS,
+  // ADD_POST,
   ADD_FAVORITE,
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,

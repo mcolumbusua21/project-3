@@ -1,6 +1,6 @@
 const axios = require("axios")
+const API_KEY = process.env.API_KEY;
 
-let API_KEY = "XU066F7etWHxuwTAOjpw0r41SBjwzsAAEDOTZQORj69J3hLv7yroOb0A3qGcDcqU77KbTGxFcxdxeU7JiIhtlLnTrCrmNK2VAWqYCynLuyE9Z3SuSXxE5K6x7RqLYHYx"
 
 // REST
 let yelpREST = axios.create({
@@ -12,10 +12,10 @@ let yelpREST = axios.create({
 })
 
 yelpREST(ENDPOINT, { params: { key: value } }).then(({ data }) => {
-  // Do something with the data
+
 })
 
-yelpREST("/businesses/search", {
+yelpREST.get("/businesses/search", {
     params: {
       location: "",
       term: ["dispensaries", "dispensary"],
@@ -26,4 +26,15 @@ yelpREST("/businesses/search", {
     businesses.forEach((b) => {
       console.log("Name: ", b.name)
     })
+  })
+  yelpREST.get("/businesses/9QFiF_YBCKvWsUu50G_yxg/reviews").then(({ data }) => {
+    console.log(data)
+  })
+  yelpREST.get("/autocomplete", {
+    params: {
+      location: "pdx",
+      text: "stumpt",
+    },
+  }).then(({ data }) => {
+    console.log(data)
   })
