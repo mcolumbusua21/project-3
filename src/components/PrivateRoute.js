@@ -5,13 +5,13 @@ import { useAuth } from "../contexts/AuthContext"
 function PrivateRoute( { component: Component, ...rest }) {
     const { currentUser } = useAuth()
     return (
-        <Route>
+        <Route
             {...rest}
             render={props => {
                 return currentUser ? <Component {...props} /> : <Redirect to="/login" />
 
-            }}
-        </Route>
+            }} />
+       
     )
 }
 
