@@ -38,3 +38,5 @@ yelpREST.get("/businesses/search", {
   }).then(({ data }) => {
     console.log(data)
   })
+
+  export API
