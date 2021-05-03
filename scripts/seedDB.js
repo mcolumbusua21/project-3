@@ -5,8 +5,10 @@ const db = require("../models");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
 
-const locationSeed = [
+const favoriteSeed = [
   {
+    username: "Bobby Flay",
+    email: "bobby@flay.com",
     business_name: "Suuup",
     street_address: "1111 S La Cholla blvd",
     city: "Tucson",
@@ -14,9 +16,10 @@ const locationSeed = [
     zipcode: "85743",
     body:
       "Here we have a location...",
-    // date: new Date(Date.now())
   },
   {
+    username: "Emeril Agassi",
+    email: "emeril@agassi.com",
     business_name: "Hiiii",
     street_address: "2222 N Main st",
     city: "San Diego",
@@ -24,9 +27,10 @@ const locationSeed = [
     zipcode: "95353",
     body:
       "Here we have another location?",
-    // date: new Date(Date.now())
   },
   {
+    username: "Rachel Ray",
+    email.: "rachel@ray.com",
     business_name: "Yooo",
     street_address: "3333 E Mission rd",
     city: "Reno",
@@ -34,12 +38,11 @@ const locationSeed = [
     zipcode: "75998",
     body:
       "Here we have a final location!",
-    // date: new Date(Date.now())
   }
 ];
 
 db.Post.remove({})
-  .then(() => db.Post.collection.insertMany(locationSeed))
+  .then(() => db.Post.collection.insertMany(favoriteSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
