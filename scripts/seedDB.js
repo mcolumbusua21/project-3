@@ -3,7 +3,7 @@ const db = require("../models");
 
 // This file empties the Posts collection and inserts the books below
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/celp");
 
 const favoriteSeed = [
   {
@@ -30,7 +30,7 @@ const favoriteSeed = [
   },
   {
     username: "Rachel Ray",
-    email.: "rachel@ray.com",
+    email: "rachel@ray.com",
     business_name: "Yooo",
     street_address: "3333 E Mission rd",
     city: "Reno",
