@@ -19,7 +19,7 @@ function Dashboard() {
         
     },[])
 
-    console.log('DISPENSARY LIST ==> ', dispensaries)
+    console.log('DISPENSARY LIST ==> ',dispensaries )
 
 
     async function handleLogout() {
