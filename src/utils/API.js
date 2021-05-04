@@ -11,30 +11,50 @@ let yelpREST = axios.create({
   },
 })
 
-yelpREST(ENDPOINT, { params: { key: value } }).then(({ data }) => {
+// yelpREST(ENDPOINT, { params: { key: value } }).then(({ data }) => {
 
-})
+// })
+const getDispensaries =async ()=> {
 
-yelpREST.get("/businesses/search", {
-    params: {
-      location: "",
-      term: ["dispensaries", "dispensary"],
-      limit: 10,
-    },
-  }).then(({ data }) => {
-    let { businesses } = data
-    businesses.forEach((b) => {
-      console.log("Name: ", b.name)
-    })
-  })
-  yelpREST.get("/businesses/9QFiF_YBCKvWsUu50G_yxg/reviews").then(({ data }) => {
-    console.log(data)
-  })
-  yelpREST.get("/autocomplete", {
-    params: {
-      location: "pdx",
-      text: "stumpt",
-    },
-  }).then(({ data }) => {
-    console.log(data)
-  })
+  try {
+    const response = await axios.get(`https://api.yelp.com/v3/businesses/search?categories=dispensary,dispensaries`)
+    const { data } = response
+    return data
+    
+  } catch(err) {
+    console.log(err)
+  }
+}
+
+
+// yelpREST.get("/businesses/search", {
+//     params: {
+//       location: "",
+//       term: ["dispensaries", "dispensary"],
+//       limit: 10,
+//     },
+//   }).then(({ data }) => {
+//     let { businesses } = data
+//     businesses.forEach((b) => {
+//       console.log("Name: ", b.name)
+//     })
+//   })
+
+
+  // yelpREST.get("/businesses/9QFiF_YBCKvWsUu50G_yxg/reviews").then(({ data }) => {
+  //   console.log(data)
+  // })
+
+
+  // yelpREST.get("/autocomplete", {
+  //   params: {
+  //     location: "pdx",
+  //     text: "stumpt",
+  //   },
+  // }).then(({ data }) => {
+  //   console.log(data)
+  // })
+
+  export {
+    getDispensaries
+  }
