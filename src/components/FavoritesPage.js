@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar() {
+function FavoritesPage() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default FavoritesPage

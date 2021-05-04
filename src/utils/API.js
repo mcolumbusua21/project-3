@@ -11,10 +11,6 @@ let yelpREST = axios.create({
   },
 })
 
-yelpREST(ENDPOINT, { params: { key: value } }).then(({ data }) => {
-
-})
-
 yelpREST.get("/businesses/search", {
     params: {
       location: "",
