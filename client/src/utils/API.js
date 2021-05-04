@@ -19,14 +19,14 @@ const getDispensaries =async ()=> {
 
   try {
    
-    const response = await axios.get("/api/search")
+    const response = await axios.get("/api/search?location=phoenix")
     const { total } = response
-    console.log(total)
+    console.log(response)
     return total
     
     
   } catch(err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
