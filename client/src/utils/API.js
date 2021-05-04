@@ -1,5 +1,5 @@
 const axios = require("axios")
-const API_KEY = process.env.REACT_APP_API_KEY;
+// const API_KEY = process.env.YELP_API_KEY;
 
 
 // REST
