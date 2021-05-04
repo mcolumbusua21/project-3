@@ -1,5 +1,5 @@
 const axios = require("axios")
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 
 // REST
@@ -27,33 +27,33 @@ const getDispensaries =async ()=> {
 }
 
 
-// yelpREST.get("/businesses/search", {
-//     params: {
-//       location: "",
-//       term: ["dispensaries", "dispensary"],
-//       limit: 10,
-//     },
-//   }).then(({ data }) => {
-//     let { businesses } = data
-//     businesses.forEach((b) => {
-//       console.log("Name: ", b.name)
-//     })
-//   })
+yelpREST.get("/businesses/search", {
+    params: {
+      location: "",
+      term: ["dispensaries", "dispensary"],
+      limit: 10,
+    },
+  }).then(({ data }) => {
+    let { businesses } = data
+    businesses.forEach((b) => {
+      console.log("Name: ", b.name)
+    })
+  })
 
 
-  // yelpREST.get("/businesses/9QFiF_YBCKvWsUu50G_yxg/reviews").then(({ data }) => {
-  //   console.log(data)
-  // })
+  yelpREST.get("/businesses/9QFiF_YBCKvWsUu50G_yxg/reviews").then(({ data }) => {
+    console.log(data)
+  })
 
 
-  // yelpREST.get("/autocomplete", {
-  //   params: {
-  //     location: "pdx",
-  //     text: "stumpt",
-  //   },
-  // }).then(({ data }) => {
-  //   console.log(data)
-  // })
+  yelpREST.get("/autocomplete", {
+    params: {
+      location: "pdx",
+      text: "stumpt",
+    },
+  }).then(({ data }) => {
+    console.log(data)
+  })
 
   export {
     getDispensaries

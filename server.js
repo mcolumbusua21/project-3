@@ -1,5 +1,11 @@
 const express = require("express");
 const axios = require('axios')
+const cors = require('cors');
+const corsOptions = {
+  origin: 'https://localhost:3001',
+  credentials: true,
+  optionSuccessStatus: 200
+}
 
 const mongoose = require("mongoose");
 const routes = require("./controllers");
@@ -9,6 +15,7 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors(corsOptions));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

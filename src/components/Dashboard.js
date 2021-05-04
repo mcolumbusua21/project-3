@@ -3,6 +3,7 @@ import { Card, Button, Alert } from 'react-bootstrap';
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { getDispensaries } from '../utils/API'
+import Hero from "./Hero"
 
 function Dashboard() {
     const [error, setError] = useState("")
@@ -34,7 +35,10 @@ function Dashboard() {
     }
 
     return (
-        <>
+        <><Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+        <h1>Celp</h1>
+        <h2>It's the Yelp for Cannabis!</h2>
+      </Hero>
         <Card>
         <Card.Body>
         <h2 className="text-center mb-4">Profile</h2>
