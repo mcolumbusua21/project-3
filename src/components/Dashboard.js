@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Button, Alert } from 'react-bootstrap';
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import { getDispensaries } from '../utils/API'
 
 function Dashboard() {
     const [error, setError] = useState("")
+    const [dispensaries, setDispensaries] = useState([])
     const { currentUser, logout } = useAuth()
     const history = useHistory()
+
+
+    useEffect(()=> {
+        
+        
+        setDispensaries(getDispensaries())
+        
+    },[])
+
+    console.log('DISPENSARY LIST ==> ', dispensaries)
+
 
     async function handleLogout() {
         setError("")
@@ -17,7 +30,6 @@ function Dashboard() {
         }catch {
             setError("Failed to log out")
         }
-
 
     }
 
