@@ -13,6 +13,7 @@ function Hero(props) {
         <div className="box text-center" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
         {props.children}
       </div>
+     
       
        
     
