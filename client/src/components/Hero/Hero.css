@@ -15,12 +15,14 @@
     height: 100vh;
     width: 100vw;
     position: absolute;
-    border: blue 3px;
+    
 }
 .box {
   display: flex;
   justify-content: center;
   position: relative;
+
+
   height: 100px;
   align-items: center;
   border-radius: 5px;
