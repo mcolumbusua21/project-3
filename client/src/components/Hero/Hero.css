@@ -21,6 +21,11 @@
   display: flex;
   justify-content: center;
   position: relative;
-  border: blue 3px;
+  height: 100px;
+  align-items: center;
+  border-radius: 5px;
 
+}
+Form {
+  width: 100%;
 }
