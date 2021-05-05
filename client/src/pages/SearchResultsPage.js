@@ -43,3 +43,4 @@ function SearchResults(){
  </div>
  )
 }
+ export default SearchResultsPage

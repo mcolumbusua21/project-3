@@ -20,14 +20,8 @@ function Hero(props) {
       <img className='cover' src={Store} alt=""/>
       <Form />
 
-     
-      
-       
-    
-    <Form />
-
     </div>
-   
+   </div>
     </>
     )
 }
