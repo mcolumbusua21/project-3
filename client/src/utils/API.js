@@ -1,4 +1,4 @@
-import { get } from "mongoose"
+// import { get } from "mongoose"
 
 const axios = require("axios")
 // const API_KEY = process.env.YELP_API_KEY;
@@ -10,8 +10,7 @@ const getDispensaries =async ()=> {
     const response = await axios.get("/api/search?location=phoenix")
     const { total } = response
     console.log(response)
-    return total
-    
+    return total    
     
   } catch(err) {
     // console.log(err)
