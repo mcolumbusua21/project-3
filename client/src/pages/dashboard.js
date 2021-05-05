@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 // import { Link, useHistory } from "react-router-dom";
 import { getDispensaries } from "../utils/API";
-import Hero from "../components/Hero";
+import Hero from "../components/Hero/Hero";
 
 function Dashboard() {
 //   const [error, setError] = useState("");
