@@ -8,7 +8,7 @@ import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
-import SearchResultsPage from "../pages/SearchResultsPage"
+// import SearchResultsPage from "../pages/SearchResultsPage"
 import ProfilePage from "../pages/ProfilePage"
 import SingleSearchPage from "../pages/SingleSearchPage"
 import FavoritesPage from "../pages/FavoritesPage"
@@ -28,7 +28,7 @@ function App() {
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route path="/search-results" component={SearchResultsPage} />
+              {/* <Route path="/search-results" component={SearchResultsPage} /> */}
               <Route path="/profile" component={ProfilePage} />
               <Route path="/single-search" component={SingleSearchPage} />
               <Route path="/favorites" component={FavoritesPage} />
