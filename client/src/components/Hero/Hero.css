@@ -14,11 +14,13 @@
     background-position: center;
     height: 100vh;
     width: 100vw;
-    position: relative;
+    position: absolute;
+    border: blue 3px;
 }
 .box {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: relative;
+  border: blue 3px;
 
 }
