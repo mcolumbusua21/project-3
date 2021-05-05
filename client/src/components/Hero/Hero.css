@@ -21,4 +21,13 @@
   display: flex;
   justify-content: center;
   position: relative;
+
+
+  height: 100px;
+  align-items: center;
+  border-radius: 5px;
+
+}
+Form {
+  width: 100%;
 }
