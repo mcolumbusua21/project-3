@@ -1,41 +1,41 @@
-import React, { useState, useEffect } from "react";
-import { getDispensaries } from "../utils/API";
+// import React, { useState, useEffect } from "react";
+// import { getDispensaries } from "../utils/API";
 
 function SearchResults(){
- const [results, setResults] = useState([])
- const [resultObject, setResultObject] = useState({})
+//  const [results, setResults] = useState([])
+//  const [resultObject, setResultObject] = useState({})
 
- useEffect(() => {
-     loadSearchResults()
- },[])
+//  useEffect(() => {
+//      loadSearchResults()
+//  },[])
 
- function loadResults(){
-     getDispensaries.getSearchResults()
-     .then(res =>
-        setSearchResults(res.data)
-        )
-        .catch(err => console.log(err));
- };
+//  function loadResults(){
+//      getDispensaries.getSearchResults()
+//      .then(res =>
+//         setSearchResults(res.data)
+//         )
+//         .catch(err => console.log(err));
+//  };
 
- function handleInputChange(e){
-     const { name, value } = e.target;
-     setResultObject({...resultObject, [name]: value})
- };
+//  function handleInputChange(e){
+//      const { name, value } = e.target;
+//      setResultObject({...resultObject, [name]: value})
+//  };
 
- function handleFormSubmit(e){
-     e.preventDefault();
-     if(resultObject.businesses){
-         getDispensaries.saveSearchResults({
-         name: resultObject.name,
-         location: resultObject.location.display_location,
-         phone: resultObject.display_phone,
-         open: resultObject.is_open,
-         rating: resultObject.rating,
-     })
-     .then(res => loadSearchResults())
-     .catch(err => console.log(err));
-    }
- };
+//  function handleFormSubmit(e){
+//      e.preventDefault();
+//      if(resultObject.businesses){
+//          getDispensaries.saveSearchResults({
+//          name: resultObject.name,
+//          location: resultObject.location.display_location,
+//          phone: resultObject.display_phone,
+//          open: resultObject.is_open,
+//          rating: resultObject.rating,
+//      })
+//      .then(res => loadSearchResults())
+//      .catch(err => console.log(err));
+//     }
+//  };
 
  return(
  <div>
@@ -43,3 +43,5 @@ function SearchResults(){
  </div>
  )
 }
+
+export default SearchResults

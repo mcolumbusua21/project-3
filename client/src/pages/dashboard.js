@@ -35,7 +35,7 @@ function Dashboard() {
         <h2>It's the Yelp for Cannabis!</h2>
       </Hero>
     </>
-  );
+  )
 }
 
 export default Dashboard;

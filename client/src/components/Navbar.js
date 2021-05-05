@@ -8,15 +8,15 @@ import {
 
 function Navbarfunction() {
   return (
-    <Navbar bg="dark" expand="lg" fixed="top" variant="dark">
+    <Navbar bg="dark" expand="lg" fixed="top" variant="dark" className="d-flex justify-content-between">
       <Navbar.Brand href="#home">
-        We should come up with a logo or pic here
+        Celp = "Yelp" for Cannabis
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#link">Profile</Nav.Link>
+      <Navbar.Toggle aria-controls="basic-navbar-nav " />
+      <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-end" style={{maxWidth: "fit-content"}}>
+        <Nav>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/profile">Profile</Nav.Link>
         </Nav>
         <Form inline>
           <Button variant="primary">Logout</Button>
