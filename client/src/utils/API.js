@@ -7,7 +7,7 @@ const getDispensaries =async ()=> {
 
   try {
    
-    const response = await axios.get("/api/search?location=phoenix")
+    const response = await axios.get("/api/dispensary")
     const { total } = response
     console.log(response)
     return total
@@ -20,7 +20,7 @@ const getDispensaries =async ()=> {
 
 const singleDispensary = async () => {
   try {
-    const response = await axios.get('/api/search?location=phoenix{id}')
+    const response = await axios.get('/api/dispensary/id')
     const { total } = response
     console.log(response)
     return total
