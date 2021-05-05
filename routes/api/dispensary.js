@@ -1,7 +1,4 @@
-const router = require("express").Router();
-const { default: axios } = require("axios");
-
-router.get("/", async ({ query: { location } }, res) => {
+router.get("/", async ({ query: { location, limit } }, res) => {
   try {
     const { data } = await axios.get(
       "https://api.yelp.com/v3/businesses/search",
@@ -13,7 +10,7 @@ router.get("/", async ({ query: { location } }, res) => {
         params: {
           location,
           term: "dispensary",
-          limit: 10,
+          limit: limit || 10,
         },
       }
     );
@@ -23,19 +20,20 @@ router.get("/", async ({ query: { location } }, res) => {
     res.status(400).json(err);
   }
 });
-router.get("/", async ({ query: { id } }, res) => {
+
+// GET - /api/dispensary/:id
+// Retrieves data for a single dispensary
+router.get("/:id", async ({ params: { id } }, res) => {
   try {
     const { data } = await axios.get(
-      "https://api.yelp.com/v3/businesses/search",
+      "https://api.yelp.com/v3/businesses/" + id,
       {
         headers: {
           Authorization: `Bearer ${process.env.YELP_API_KEY}`,
           "Content-type": "application/json",
         },
         params: {
-          id,
           term: "dispensary",
-          limit: 10,
         },
       }
     );
