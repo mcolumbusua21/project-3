@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Col } from "react-bootstrap";
+import './Form.css'
 
 function Formfiller() {
   return (
