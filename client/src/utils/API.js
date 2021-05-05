@@ -1,20 +1,8 @@
+import { get } from "mongoose"
+
 const axios = require("axios")
 // const API_KEY = process.env.YELP_API_KEY;
 
-
-// REST
-// let yelpREST = axios.create({
-//   baseURL: "https://api.yelp.com/v3/businesses/search",
-//   headers: {
-//     Authorization: `Bearer ${API_KEY}`,
-//     "Content-type": "application/json",
-//   },
-  
-// })
-// console.log(yelpREST)
-// yelpREST(ENDPOINT, { params: { key: value } }).then(({ data }) => {
-
-// })
 const getDispensaries =async ()=> {
 
   try {
@@ -26,6 +14,18 @@ const getDispensaries =async ()=> {
     
     
   } catch(err) {
+    // console.log(err)
+  }
+}
+
+const singleDispensary = async () => {
+  try {
+    const response = await axios.get('/api/search?location=phoenix{id}')
+    const { total } = response
+    console.log(response)
+    return total
+  }
+  catch(err) {
     // console.log(err)
   }
 }
@@ -59,5 +59,6 @@ const getDispensaries =async ()=> {
 //   })
 
   export {
-    getDispensaries
+    getDispensaries,
+    singleDispensary
   }
