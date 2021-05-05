@@ -1,5 +1,5 @@
 const router = require("express").Router();
 
-router.use("/search", require("./search"));
+router.use("/dispensary", require("./dispensary"));
 
 module.exports = router;
