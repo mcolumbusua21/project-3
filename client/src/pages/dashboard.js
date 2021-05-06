@@ -52,16 +52,17 @@ function Dashboard() {
   // }
   // }
 
+ 
 
 return (
-    <>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>Celp</h1>
-        <h2>It's the Yelp for Cannabis!</h2>
+    <div style={{display: 'flex', justifyContent: 'center',   alignItems: 'center', flexDirection: 'column'}}>
+      <Hero className='hero-container'>
+        <h1 className='m-5'>Celp</h1>
+        <h2 className='m-2 p-3'>It's the Yelp for Cannabis!</h2>
       </Hero>
-     
+    
     <div>
-      <h1>Dispensaries Near Here</h1>
+    
       {/* <Row>
         <Col size="md-6">
           <ListGroup>
@@ -82,8 +83,8 @@ return (
       </Row> */}
     </div>
   
-    </>
-  )
-}
+     </div>
+   )
+ }
 
 export default Dashboard
