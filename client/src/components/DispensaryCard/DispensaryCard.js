@@ -1,14 +1,14 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { FcLike } from 'react-icons/fc';
 
-
-function DispensaryCard({ name, location, phone, is_closed, rating }) {
+function DispensaryCard({ name, location, display_phone, is_closed, rating }) {
   return (
     <Card>
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text >
-          {location.display_address.join(", ")} {phone} {is_closed} {rating} 
+        <Card.Title>{name} <FcLike></FcLike></Card.Title>
+        <Card.Text>
+          {location.display_address.join(", ")} {display_phone} {is_closed} {rating}
         </Card.Text>
       </Card.Body>
     </Card>

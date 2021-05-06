@@ -1,7 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import Store from "../../assets/images/herbology.jpg";
-import Form from "../Form/index";
+
 
 function Hero(props) {
   return (
