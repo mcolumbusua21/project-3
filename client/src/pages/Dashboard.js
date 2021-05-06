@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { Col, Row, Card, ListGroup } from "react-bootstrap";
+import { Col, Row, Card, ListGroup } from "react-bootstrap";
+
+
 // import Formfiller from "../components/Form/index";
 import { getDispensaries } from "../utils/API";
 import Hero from "../components/Hero/Hero";
@@ -7,13 +9,13 @@ import Hero from "../components/Hero/Hero";
 // import { Link, useHistory } from "react-router-dom";
 
 function Dashboard() {
-  // const [dispensaries, setDispensaries] = useState([]);
+  const [dispensaries, setDispensaries] = useState([]);
 
-  // useEffect(() => {
-  //   setDispensaries(getDispensaries());
-  // }, []);
+  useEffect(() => {
+    setDispensaries(getDispensaries());
+  }, []);
 
-  // console.log("DISPENSARY LIST ==> ", dispensaries);
+  console.log("DISPENSARY LIST ==> ", dispensaries);
 
   // function SearchResults() {
   const [results, setSearchResults] = useState([]);
@@ -30,7 +32,6 @@ function Dashboard() {
         setResultObject(dispensaries.data);
       }
     } catch (err) {
-      // go fuck yourself
     }
   }
 
@@ -63,11 +64,11 @@ function Dashboard() {
         <h2 className='m-2 p-3'>It's the Yelp for Cannabis!</h2>
       </Hero>
 
-      {/* <Row>
+      <Row>
         <Col size="md-6">
           <ListGroup>
               {results.map(results => (
-                  <ListItem key={results}></ListItem>
+                  <ListGroup.Item key={results}></ListGroup.Item>
               ))}
             <Card>
               <Card.Body>
@@ -80,7 +81,7 @@ function Dashboard() {
             </Card>
           </ListGroup>
         </Col>
-      </Row> */}    
+      </Row>    
     </div>
 
    );
