@@ -3,7 +3,7 @@
 const axios = require("axios")
 // const API_KEY = process.env.YELP_API_KEY;
 
-const getDispensaries =async ()=> {
+export const getDispensaries = async ()=> {
 
   try {
    
@@ -17,7 +17,7 @@ const getDispensaries =async ()=> {
   }
 }
 
-const singleDispensary = async () => {
+export const singleDispensary = async () => {
   try {
     const response = await axios.get('/api/dispensary/id')
     const { total } = response
@@ -56,8 +56,3 @@ const singleDispensary = async () => {
 //   }).then(({ data }) => {
 //     console.log(data)
 //   })
-
-  export {
-    getDispensaries,
-    singleDispensary
-  }
