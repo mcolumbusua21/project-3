@@ -8,13 +8,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@fortawesome/fontawesome-free": "^5.15.3",
-=======
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
->>>>>>> 70c579696162a0f87230cb6f7b82c61a2a1f6b6e
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
