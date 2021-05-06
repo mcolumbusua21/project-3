@@ -6,6 +6,7 @@ import DispensaryCard from "../components/DispensaryCard";
 import { getDispensaries } from "../utils/API";
 import Navbar from "../components/Navbar"
 
+
 function Dashboard() {
   const [dispensaries, setDispensaries] = useState([]);
   const [location, setLocation] = useState("");
@@ -40,8 +41,9 @@ function Dashboard() {
       </Hero>
 
       <Row>
-        <Col size="md-6">
-          <ListGroup>
+        <Col className="mt-5" size="md-6">
+          <p>Search Results below, click on the heart to add the location to your favorites list:</p>
+          <ListGroup className="mt-5">
             {dispensaries.map((dispensary) => (
               <DispensaryCard {...dispensary} />
             ))}
