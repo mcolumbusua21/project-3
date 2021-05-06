@@ -17,17 +17,17 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(express.static("public"));
 // Add routes, both API and view
-app.get("/dispensarylist", async (req, res) => {
-  try {
-    const response = await axios.get(
-      `https://api.yelp.com/v3/businesses/search?categories=dispensary,dispensaries`
-    );
-    const { data } = response;
-    res.json(data);
-  } catch (err) {
-    console.log(err);
-  }
-});
+// app.get("/dispensarylist", async (req, res) => {
+//   try {
+//     const response = await axios.get(
+//       `https://api.yelp.com/v3/businesses/search?categories=dispensary,dispensaries`
+//     );
+//     const { data } = response;
+//     res.json(data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
 app.use(routes);
 
 // Connect to the Mongo DB
