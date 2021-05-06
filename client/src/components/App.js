@@ -10,16 +10,13 @@ import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 // import SearchResultsPage from "../pages/SearchResultsPage"
 import ProfilePage from "../pages/ProfilePage"
-import SingleSearchPage from "../pages/SingleSearchPage"
-import FavoritesPage from "../pages/FavoritesPage"
+// import SingleSearchPage from "../pages/SingleSearchPage"
+// import FavoritesPage from "../pages/FavoritesPage"
 
 function App() {
   return (
-    <div
-      // className="d-flex align-items-center justify-content-center"
-      // style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+ 
+      <div>
         <Router>
           <AuthProvider>
             <Switch>
@@ -30,14 +27,12 @@ function App() {
               <Route path="/forgot-password" component={ForgotPassword} />
               {/* <Route path="/search-results" component={SearchResultsPage} /> */}
               <Route path="/profile" component={ProfilePage} />
-              <Route path="/single-search" component={SingleSearchPage} />
-              <Route path="/favorites" component={FavoritesPage} />
+              {/* <Route path="/single-search" component={SingleSearchPage} /> */}
+              {/* <Route path="/favorites" component={FavoritesPage} /> */}
             </Switch>
           </AuthProvider>
         </Router>
       </div>
-    </div>
-   
   );
 }
 
