@@ -1,3 +1,5 @@
+const router = require("express").Router();
+
 router.get("/", async ({ query: { location, limit } }, res) => {
   try {
     const { data } = await axios.get(
