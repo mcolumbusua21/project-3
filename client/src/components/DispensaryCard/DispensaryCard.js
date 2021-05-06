@@ -6,7 +6,7 @@ function DispensaryCard({ name, location, display_phone, is_closed, rating }) {
   return (
     <Card>
       <Card.Body>
-        <Card.Title>{name} <FcLike></FcLike></Card.Title>
+        <Card.Title style={{fontFamily:'Permanent Marker'}}>{name} <FcLike></FcLike></Card.Title>
         <Card.Text>
           {location.display_address.join(", ")} {display_phone} {is_closed} {rating}
         </Card.Text>
