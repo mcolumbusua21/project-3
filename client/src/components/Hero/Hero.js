@@ -11,7 +11,10 @@ function Hero(props) {
        
           {props.children}
         
-          <Form />
+          <Form
+            handleChange={props.onChange}
+            onFormSubmit={props.onFormSubmit}
+          />
 
   
       </div>
