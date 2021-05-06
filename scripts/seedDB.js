@@ -7,37 +7,25 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/favorite_db");
 
 const favoriteSeed = [
   {
-    username: "Bobby Flay",
-    email: "bobby@flay.com",
-    business_name: "Suuup",
-    street_address: "1111 S La Cholla blvd",
-    city: "Tucson",
-    state: "Az",
-    zipcode: "85743",
-    body:
-      "Here we have a location...",
+    id: "11",
+    name: "Suuup",
+    display_address: "1111 S La Cholla blvd",
+    display_phone: "111-111-1111", 
+    rating: "2"
   },
   {
-    username: "Emeril Agassi",
-    email: "emeril@agassi.com",
-    business_name: "Hiiii",
-    street_address: "2222 N Main st",
-    city: "San Diego",
-    state: "Ca",
-    zipcode: "95353",
-    body:
-      "Here we have another location?",
+    id: "22",
+    name: "Hiiii",
+    display_address: "2222 N Main st",
+    display_phone: "222-222-2222",
+    rating: "3"
   },
   {
-    username: "Rachel Ray",
-    email: "rachel@ray.com",
-    business_name: "Yooo",
-    street_address: "3333 E Mission rd",
-    city: "Reno",
-    state: "Nv",
-    zipcode: "75998",
-    body:
-      "Here we have a final location!",
+    id: "33",
+    name: "Yooo",
+    display_address: "3333 E Mission rd",
+    display_phone: "333-333-3333",
+    rating: "4"
   }
 ];
 

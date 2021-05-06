@@ -2,15 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const favoriteSchema = new Schema({
-  username: { type: String, required: true },
-  email: { type: String, required: true },
-  business_name: { type: String, required: true },
-  street_address: { type: String, required: true },
-  city: { type: String, required: true },
-  state: { type: String, required: true },
-  zipcode: { type: String, required: true },
-  body: String,
-  
+  id: { type: String, required: true },
+  name: { type: String, required: true },
+  display_address: { type: String, required: true },
+  display_phone: { type: String, required: true },
+  rating: { type: String, required: true },  
 });
 
 const Favorite = mongoose.model("Favorite", favoriteSchema);
