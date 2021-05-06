@@ -17,10 +17,9 @@ function Navbarfunction() {
         <Nav>
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/profile">Profile</Nav.Link>
+          <Nav.Link href="/signup">Create an Account</Nav.Link>
+          <Nav.Link href="/login">Log In</Nav.Link>
         </Nav>
-        <Form inline>
-          <Button variant="primary">Logout</Button>
-        </Form>
       </Navbar.Collapse>
     </Navbar>
   );

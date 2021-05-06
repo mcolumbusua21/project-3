@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Col, Row, Card, ListGroup } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Row, ListGroup } from "react-bootstrap";
 import Hero from "../components/Hero";
 import Form from "../components/Form";
 import DispensaryCard from "../components/DispensaryCard";
 import { getDispensaries } from "../utils/API";
+import Navbar from "../components/Navbar"
 
 function Dashboard() {
   const [dispensaries, setDispensaries] = useState([]);
@@ -28,6 +29,7 @@ function Dashboard() {
         flexDirection: "column",
       }}
     >
+      <Navbar/>
       <Hero className="hero-container">
         <h1 className="m-5">Celp</h1>
         <h2 className="m-2 p-3">It's the Yelp for Cannabis!</h2>
