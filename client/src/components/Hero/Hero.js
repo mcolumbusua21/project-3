@@ -7,16 +7,7 @@ function Hero(props) {
   return (
     <>
       <div className="store">
-    
-       
-          {props.children}
-        
-          <Form
-            handleChange={props.onChange}
-            onFormSubmit={props.onFormSubmit}
-          />
-
-  
+        {props.children}
       </div>
     </>
   );
