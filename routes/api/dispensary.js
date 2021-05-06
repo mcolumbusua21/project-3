@@ -1,5 +1,4 @@
-const router = require("express").Router();
-
+const router = require('express').Router()
 router.get("/", async ({ query: { location, limit } }, res) => {
   try {
     const { data } = await axios.get(
@@ -10,7 +9,7 @@ router.get("/", async ({ query: { location, limit } }, res) => {
           "Content-type": "application/json",
         },
         params: {
-          location,
+          location: location || 'phoenix',
           term: "dispensary",
           limit: limit || 10,
         },
@@ -19,7 +18,7 @@ router.get("/", async ({ query: { location, limit } }, res) => {
     res.json(data);
   } catch (err) {
     console.log(JSON.stringify(err, null, 2));
-    res.status(400).json(err);
+    res.status(200).json(err);
   }
 });
 

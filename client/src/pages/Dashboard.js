@@ -44,8 +44,7 @@ function Dashboard() {
     console.log(e);
     e.preventDefault();
     if (resultObject.businesses) {
-      getDispensaries
-        .saveSearchResults({
+      getDispensaries.saveSearchResults({
           name: resultObject.name,
           location: resultObject.location.display_location,
           phone: resultObject.display_phone,
