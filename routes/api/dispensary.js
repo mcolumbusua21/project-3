@@ -1,4 +1,4 @@
-
+const router = require('express').Router()
 router.get("/", async ({ query: { location, limit } }, res) => {
   try {
     const { data } = await axios.get(
@@ -9,7 +9,7 @@ router.get("/", async ({ query: { location, limit } }, res) => {
           "Content-type": "application/json",
         },
         params: {
-          location,
+          location: location || 'phoenix',
           term: "dispensary",
           limit: limit || 10,
         },
