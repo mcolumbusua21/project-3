@@ -1,6 +1,6 @@
 // import { get } from "mongoose"
 
-const axios = require("axios")
+const axios = require("axios");
 // const API_KEY = process.env.YELP_API_KEY;
 
 export const getDispensaries = async ()=> {
