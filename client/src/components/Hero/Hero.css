@@ -21,9 +21,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    color: yellow;
+    font-family: 'Permanent Marker', cursive;
 
 
     
+}
+
+.m-5 {
+  font-size: 56px;
+  border-radius: 3px solid yellow;
+}
+.m-2 {
+  font-size: 44px;
 }
 
