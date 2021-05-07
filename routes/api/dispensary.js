@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
+const Favorite = require("../../models/favorite")
 
 router.get("/", async ({ query: { location, limit } }, res) => {
   try {
