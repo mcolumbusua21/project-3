@@ -23,7 +23,6 @@ function Navbarfunction() {
 
   return (
     <Navbar
-      bg="dark"
       expand="lg"
       fixed="top"
       variant="dark"
@@ -48,7 +47,7 @@ function Navbarfunction() {
           {!currentUser ? (
             <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/login">Log In</Nav.Link>
           ) : (
-            <Button variant="link" onClick={handleLogout}>
+            <Button style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} variant="link" onClick={handleLogout}>
               Log Out
             </Button>
           )}
