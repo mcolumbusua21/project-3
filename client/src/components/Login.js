@@ -8,8 +8,8 @@ export default function Login() {
   const passwordRef = useRef();
   const { login } = useAuth();
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false)
-  const history = useHistory()
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -18,7 +18,7 @@ export default function Login() {
         setError("")
         setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value);
-      history.push('/')
+      history.push('/favorites')
     } catch {
         setError("Failed to log in")
     }
