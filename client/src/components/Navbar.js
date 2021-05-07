@@ -1,7 +1,9 @@
+
 import React, { useState } from "react";
 import { Navbar, Nav, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
+
 
 function Navbarfunction() {
   const { currentUser, logout } = useAuth();
@@ -22,12 +24,16 @@ function Navbarfunction() {
   return (
     <Navbar
       bg="dark"
+
       expand="lg"
       fixed="top"
       variant="dark"
       className="d-flex justify-content-between"
     >
-      <Navbar.Brand href="#home">Celp = "Yelp" for Cannabis</Navbar.Brand>
+
+      <Navbar.Brand style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'40px' }} href="#home">
+        Celp 
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav " />
       <Navbar.Collapse
         id="basic-navbar-nav"
@@ -47,6 +53,13 @@ function Navbarfunction() {
               Log Out
             </Button>
           )}
+        style={{ maxWidth: "fit-content", color: "yellow" }}
+      >
+        <Nav>
+          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/">Home</Nav.Link>
+          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }}href="/profile">Profile</Nav.Link>
+          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }}href="/signup">Create an Account</Nav.Link>
+          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }}href="/login">Log In</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
