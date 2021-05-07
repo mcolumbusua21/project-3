@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const axios = require("axios");
+const Favorite = require("../../models/favorite");
 
-router.get("/", async ({query}, res) => {
-  const {location, limit} = query
+router.get("/", async ({ query }, res) => {
+  const { location, limit } = query;
   try {
     if (!location) throw new Error("location url parameter must be provided");
     const { data } = await axios.get(
@@ -21,7 +22,27 @@ router.get("/", async ({query}, res) => {
     );
     res.json(data);
   } catch (err) {
-    console.log(err)
+    console.log(err);
+    res.status(400).json({
+      status: 400,
+      message: err.message,
+    });
+  }
+});
+
+//favorties route
+router.post("/", async (req, res) => {
+  const favorite = new Favorite({
+    name: req.body.name,
+    address: req.body.display_address,
+    phone: req.body.display_phone,
+    open: req.body.is_open,
+    rating: req.body.rating,
+  });
+  try {
+    favorite = await favorite.save()
+    res.redirect("/favorite")
+  } catch (err) {
     res.status(400).json({
       status: 400,
       message: err.message,
