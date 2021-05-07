@@ -1,0 +1,30 @@
+
+.page-load {
+    background-image: 
+    linear-gradient(
+      to top, 
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.25),
+      transparent,
+      transparent
+      ),
+      url('../../assets/images/store.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    border: 3px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: yellow;
+    font-family: 'Permanent Marker', cursive;
+
+
+    
+}

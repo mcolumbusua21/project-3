@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom"
+import Navbar from "../Navbar"
+import './SignUp.css'
 
 export default function Signup() {
   const emailRef = useRef();
@@ -32,7 +34,8 @@ export default function Signup() {
 
   return (
     <>
-      <Card>
+    <Navbar />
+      <Card className="sign-in">
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
           {error && <Alert variant="danger"> {error} </Alert>}
@@ -49,7 +52,7 @@ export default function Signup() {
               <Form.Label>Password Confirmation</Form.Label>
               <Form.Control type="password" ref={passwordConfirmRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button style={{background:'yellow', color:'blue'}} disabled={loading} className="w-100" type="submit">
               Sign Up
             </Button>
           </Form>
