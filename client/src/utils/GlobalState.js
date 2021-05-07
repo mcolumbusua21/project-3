@@ -40,11 +40,12 @@ const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     posts: [],
     currentPost: {
-      name: "",
-      display_address: "",
-      display_phone: "",
-      is_closed: "",
-      rating: "",
+      id: "",
+    name: "",
+    display_address: "",
+    display_phone: "", 
+    is_open: "",
+    rating: ""
     },
     favorites: [],
     loading: false
