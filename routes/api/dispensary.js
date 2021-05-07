@@ -23,8 +23,10 @@ router.get("/", async ({ query: { location, limit } }, res) => {
     res.status(400).json({
       status: 400,
       message: err.message,
+      
     });
   }
+  console.log(error.response);
 });
 
 // GET - /api/dispensary/:id
