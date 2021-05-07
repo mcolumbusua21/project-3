@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 import { Card, Button, Alert } from 'react-bootstrap';
 import { Link, useHistory } from "react-router-dom";
+import './ProfilePage.css'
+import Navbar from '../../components/Navbar'
 
 function ProfilePage() {
     const [error, setError] = useState("");
@@ -21,7 +23,8 @@ function ProfilePage() {
     
     return (
         <>
-        <Card>
+        <Navbar />
+        <Card className='profile-page'>
         <Card.Body>
         <h2 className="text-center mb-4">Profile</h2>
         {error && <Alert variant="danger"> {error} </Alert>}
@@ -30,7 +33,7 @@ function ProfilePage() {
         </Card.Body>
         </Card>
         <div className="w-100 text-center mt-2">
-         <Button variant="link" onClick={handleLogout}>Log Out</Button>
+         <Button style={{background:'yellow', color:'blue'}} variant="link" onClick={handleLogout}>Log Out</Button>
          </div>
          </>
     )

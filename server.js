@@ -1,10 +1,10 @@
 require("dotenv").config();
 const express = require("express");
-const axios = require("axios");
+const logger = require("morgan");
 // const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
-const path = require("path")
 const app = express();
+const path = require("path");
 const PORT = process.env.PORT || 3002;
 
 // Define middleware here
@@ -15,10 +15,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use(logger("dev"));
 app.use(express.static("public"));
 
 //use api routes
-app.use("/", require(".routes"));
+app.use("/", require("./routes"));
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/favorite_db", {
@@ -27,7 +28,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/favorite_db", {
   useCreateIndex: true,
 });
 
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
@@ -38,8 +39,6 @@ app.listen(PORT, function () {
 
 //mongodb URI
 //mongodb+srv://stephanie:8385tas@cluster0.s3qz3.mongodb.net/favorite_db?retryWrites=true&w=majority
-
-
 
 // Add routes, both API and view
 // app.get("/dispensarylist", async (req, res) => {

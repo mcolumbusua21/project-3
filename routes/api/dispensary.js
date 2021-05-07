@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const axios = require("axios");
 
-router.get("/", async ({ query: { location, limit } }, res) => {
+router.get("/", async ({query}, res) => {
+  const {location, limit} = query
   try {
     if (!location) throw new Error("location url parameter must be provided");
     const { data } = await axios.get(
@@ -20,6 +21,7 @@ router.get("/", async ({ query: { location, limit } }, res) => {
     );
     res.json(data);
   } catch (err) {
+    console.log(err)
     res.status(400).json({
       status: 400,
       message: err.message,
@@ -31,25 +33,25 @@ router.get("/", async ({ query: { location, limit } }, res) => {
 
 // GET - /api/dispensary/:id
 // Retrieves data for a single dispensary
-router.get("/:id", async ({ params: { id } }, res) => {
-  try {
-    const { data } = await axios.get(
-      "https://api.yelp.com/v3/businesses/" + id,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.YELP_API_KEY}`,
-          "Content-type": "application/json",
-        },
-        params: {
-          term: "dispensary",
-        },
-      }
-    );
-    res.json(data);
-  } catch (err) {
-    console.log(JSON.stringify(err, null, 2));
-    res.status(400).json(err);
-  }
-});
+// router.get("/:id", async ({ params: { id } }, res) => {
+//   try {
+//     const { data } = await axios.get(
+//       "https://api.yelp.com/v3/businesses/" + id,
+//       {
+//         headers: {
+//           Authorization: `Bearer ${process.env.YELP_API_KEY}`,
+//           "Content-type": "application/json",
+//         },
+//         params: {
+//           term: "dispensary",
+//         },
+//       }
+//     );
+//     res.json(data);
+//   } catch (err) {
+//     console.log(JSON.stringify(err, null, 2));
+//     res.status(400).json(err);
+//   }
+// });
 
 module.exports = router;
