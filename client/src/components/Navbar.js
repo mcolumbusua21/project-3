@@ -1,15 +1,36 @@
-import React from "react";
-import { Navbar, Nav, Form, Button } from "react-bootstrap";
+
+import React, { useState } from "react";
+import { Navbar, Nav, Button, Alert } from "react-bootstrap";
+import { useAuth } from "../contexts/AuthContext";
+import { useHistory } from "react-router-dom";
+
 
 function Navbarfunction() {
+  const { currentUser, logout } = useAuth();
+  const [error, setError] = useState("");
+  const history = useHistory();
+
+  async function handleLogout() {
+    setError("");
+
+    try {
+      await logout();
+      history.push("/");
+    } catch {
+      setError("Failed to log out");      
+    }
+  }
+
   return (
     <Navbar
-      bg="#000000"
+      bg="dark"
+
       expand="lg"
       fixed="top"
       variant="dark"
       className="d-flex justify-content-between"
     >
+
       <Navbar.Brand style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'40px' }} href="#home">
         Celp 
       </Navbar.Brand>
@@ -17,6 +38,21 @@ function Navbarfunction() {
       <Navbar.Collapse
         id="basic-navbar-nav"
         className="d-flex justify-content-end"
+        style={{ maxWidth: "fit-content" }}
+      >
+        <Nav>
+          {error && <Alert variant="danger"> {error} </Alert>}
+          <Nav.Link href="/">Home</Nav.Link>
+          {currentUser && <Nav.Link href="/favorites">Favorites</Nav.Link>}
+          {currentUser && <Nav.Link href="/profile">Profile</Nav.Link>}
+          {!currentUser && <Nav.Link href="/signup">Create an Account</Nav.Link>}
+          {!currentUser ? (
+            <Nav.Link href="/login">Log In</Nav.Link>
+          ) : (
+            <Button variant="link" onClick={handleLogout}>
+              Log Out
+            </Button>
+          )}
         style={{ maxWidth: "fit-content", color: "yellow" }}
       >
         <Nav>
