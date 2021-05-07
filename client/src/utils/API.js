@@ -13,3 +13,5 @@ export const getDispensaries = ({ location, limit }) => {
 export const singleDispensary = (id) => {
   return axios.get("/api/dispensary/" + id);
 };
+
+

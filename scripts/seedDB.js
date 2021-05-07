@@ -11,26 +11,29 @@ const favoriteSeed = [
     name: "Suuup",
     display_address: "1111 S La Cholla blvd",
     display_phone: "111-111-1111", 
-    rating: "2"
+    is_open: "true",
+    rating: "1"
   },
   {
     id: "22",
     name: "Hiiii",
     display_address: "2222 N Main st",
     display_phone: "222-222-2222",
-    rating: "3"
+    is_open: "false",
+    rating: "2"
   },
   {
     id: "33",
     name: "Yooo",
     display_address: "3333 E Mission rd",
     display_phone: "333-333-3333",
-    rating: "4"
+    is_open: "true",
+    rating: "3"
   }
 ];
 
-db.Post.remove({})
-  .then(() => db.Post.collection.insertMany(favoriteSeed))
+db.Favorite.deleteOne({})
+  .then(() => db.Favorite.collection.insertMany(favoriteSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
