@@ -24,13 +24,11 @@ function Navbarfunction() {
   return (
     <Navbar
       bg="dark"
-
       expand="lg"
       fixed="top"
       variant="dark"
       className="d-flex justify-content-between"
     >
-
       <Navbar.Brand style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'40px' }} href="#home">
         Celp 
       </Navbar.Brand>
@@ -39,28 +37,22 @@ function Navbarfunction() {
         id="basic-navbar-nav"
         className="d-flex justify-content-end"
         style={{ maxWidth: "fit-content" }}
+        color= "yellow"
       >
         <Nav>
           {error && <Alert variant="danger"> {error} </Alert>}
-          <Nav.Link href="/">Home</Nav.Link>
-          {currentUser && <Nav.Link href="/favorites">Favorites</Nav.Link>}
-          {currentUser && <Nav.Link href="/profile">Profile</Nav.Link>}
-          {!currentUser && <Nav.Link href="/signup">Create an Account</Nav.Link>}
+          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/">Home</Nav.Link>
+          {currentUser && <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/favorites">Favorites</Nav.Link>}
+          {currentUser && <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/profile">Profile</Nav.Link>}
+          {!currentUser && <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/signup">Create an Account</Nav.Link>}
           {!currentUser ? (
-            <Nav.Link href="/login">Log In</Nav.Link>
+            <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/login">Log In</Nav.Link>
           ) : (
             <Button variant="link" onClick={handleLogout}>
               Log Out
             </Button>
           )}
-        style={{ maxWidth: "fit-content", color: "yellow" }}
-      >
-        <Nav>
-          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/">Home</Nav.Link>
-          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }}href="/profile">Profile</Nav.Link>
-          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }}href="/signup">Create an Account</Nav.Link>
-          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }}href="/login">Log In</Nav.Link>
-        </Nav>
+          </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
