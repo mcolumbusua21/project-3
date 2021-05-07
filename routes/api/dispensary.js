@@ -31,7 +31,7 @@ router.get("/", async ({ query }, res) => {
 });
 
 //favorties route
-router.post("/", async (req, res) => {
+router.post("/db", async (req, res) => {
   const favorite = new Favorite({
     name: req.body.name,
     address: req.body.display_address,
@@ -46,8 +46,10 @@ router.post("/", async (req, res) => {
     res.status(400).json({
       status: 400,
       message: err.message,
+      
     });
   }
+  console.log(error.response);
 });
 
 // GET - /api/dispensary/:id
