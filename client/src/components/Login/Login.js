@@ -20,7 +20,7 @@ export default function Login() {
         setError("")
         setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value);
-      history.push('/favorites')
+      history.push('/')
     } catch {
         setError("Failed to log in")
     }
@@ -43,16 +43,16 @@ export default function Login() {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button style={{background:'yellow', color:'blue'}} disabled={loading} className="w-100" type="submit">
               Log In
             </Button>
           </Form>
           <div className="w-100 text-center mt-2"> 
-          <Link to="/forgot-password">Forgot Password?</Link>
+          <Link style={{ color:'yellow'}}to="/forgot-password">Forgot Password?</Link>
           </div>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
+      <div className="w-100 text-center mt-2" style={{fontFamily:'Permanent Marker'}}>
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
     </>

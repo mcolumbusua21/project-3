@@ -1,7 +1,8 @@
+
 const axios = require("axios");
 
 export const getDispensaries = ({ location, limit }) => {
-  return axios.get("/api/dispensary", {
+  return axios.get("/api/dispensary/", {
     params: {
       location,
       limit,
