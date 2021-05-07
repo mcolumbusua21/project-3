@@ -29,8 +29,8 @@ const favoriteSeed = [
   }
 ];
 
-db.Post.remove({})
-  .then(() => db.Post.collection.insertMany(favoriteSeed))
+db.Favorite.deleteOne({})
+  .then(() => db.Favorite.collection.insertMany(favoriteSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

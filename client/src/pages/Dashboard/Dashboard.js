@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Col, Row, ListGroup } from "react-bootstrap";
-import Hero from "../components/Hero";
-import Form from "../components/Form";
-import DispensaryCard from "../components/DispensaryCard";
-import { getDispensaries } from "../utils/API";
-import Navbar from "../components/Navbar"
+import Hero from "../../components/Hero";
+import Form from "../../components/Form";
+import DispensaryCard from "../../components/DispensaryCard";
+import { getDispensaries } from "../../utils/API";
+import Navbar from "../../components/Navbar"
 
 
 function Dashboard() {
@@ -38,11 +38,14 @@ function Dashboard() {
           handleChange={(e) => setLocation(e.target.value)}
           onFormSubmit={handleFormSubmit}
         />
+        <div>
+        <footer className='footer' style={{fontFamily:'Permanent Marker', color: 'yellow', fontSize: '26px'}}>Scroll Down For Results </footer>
+        </div>
       </Hero>
 
       <Row>
-        <Col className="mt-5" size="md-6">
-          <p>Search Results below, click on the heart to add the location to your favorites list:</p>
+        <Col style={{fontFamily:'Permanent Marker'}} className="mt-5" size="md-6">
+          <p>Click on the heart to add the location to your favorites list!</p>
           <ListGroup className="mt-5">
             {dispensaries.map((dispensary) => (
               <DispensaryCard {...dispensary} />
