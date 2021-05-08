@@ -14,12 +14,12 @@ import FavoritesPage from "../pages/FavoritesPage"
 
 function App() {
 
-  // const addFavorite = () => {
-  //   // dispatch({
-  //   //   type: ADD_FAVORITE, 
-  //   //   post: state.currentPost
-  //   // });
-  // };
+  const addFavorite = () => {
+    dispatch({
+      type: ADD_FAVORITE, 
+      post: state.currentPost
+    });
+  };
 
 
   return (
