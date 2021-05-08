@@ -1,5 +1,8 @@
 const db = require("../models");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6758db5ea1d446a9e4ec541a412d56042cb4ea92
 module.exports = {
   findById: function(req, res) {
     db.Favorite
@@ -26,4 +29,8 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 6758db5ea1d446a9e4ec541a412d56042cb4ea92

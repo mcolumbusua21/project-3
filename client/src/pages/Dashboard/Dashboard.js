@@ -3,9 +3,8 @@ import { Col, Row, ListGroup } from "react-bootstrap";
 import Hero from "../../components/Hero";
 import Form from "../../components/Form";
 import DispensaryCard from "../../components/DispensaryCard";
-import { getDispensaries } from "../../utils/API";
-import Navbar from "../../components/Navbar"
-
+import { getDispensaries, addToFavorite } from "../../utils/API";
+import Navbar from "../../components/Navbar";
 
 function Dashboard() {
   const [dispensaries, setDispensaries] = useState([]);
@@ -21,7 +20,16 @@ function Dashboard() {
     setLocation("");
   }
 
-  
+  async function favorite({ uuid, dispensary }) {
+    try {
+      const { data } = await addToFavorite({
+        uuid,
+        dispensary,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <div
@@ -32,7 +40,7 @@ function Dashboard() {
         flexDirection: "column",
       }}
     >
-      <Navbar/>
+      <Navbar />
       <Hero className="hero-container">
         <h1 className="m-5">Celp</h1>
         <h2 className="m-2 p-3">It's the Yelp for Cannabis!</h2>
@@ -41,16 +49,29 @@ function Dashboard() {
           onFormSubmit={handleFormSubmit}
         />
         <div>
-        <footer className='footer' style={{fontFamily:'Permanent Marker', color: 'yellow', fontSize: '26px'}}>Scroll Down For Results </footer>
+          <footer
+            className="footer"
+            style={{
+              fontFamily: "Permanent Marker",
+              color: "yellow",
+              fontSize: "26px",
+            }}
+          >
+            Scroll Down For Results{" "}
+          </footer>
         </div>
       </Hero>
 
       <Row>
-        <Col style={{fontFamily:'Permanent Marker'}} className="mt-5" size="md-6">
+        <Col
+          style={{ fontFamily: "Permanent Marker" }}
+          className="mt-5"
+          size="md-6"
+        >
           <p>Click on the heart to add the location to your favorites list!</p>
           <ListGroup className="mt-5">
             {dispensaries.map((dispensary) => (
-              <DispensaryCard {...dispensary} />
+              <DispensaryCard favorite={favorite} {...dispensary} />
             ))}
           </ListGroup>
         </Col>
