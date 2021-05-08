@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
-const Favorite = require("../../models/favorite");
+const User = require("../../models/User");
 // import { useAuth } from ("../../client/src/contexts/AuthContext")
 
 router.get("/", async ({ query }, res) => {
@@ -32,26 +32,42 @@ router.get("/", async ({ query }, res) => {
 });
 
 //favorties route
-router.post("/db", async (req, res) => {
-  
-  const favorite = new Favorite({
-    name: req.body.name,
-    address: req.body.display_address,
-    phone: req.body.display_phone,
-    open: req.body.is_open,
-    rating: req.body.rating,
-  });
+// POST - /api/dispensary/favorite
+router.post("/favorite", async (req, res) => {
+  console.log(req.body);
   try {
-    favorite = await favorite.save()
-    res.redirect("/favorite")
+    let user = await User.findOne({ uuid: req.body.uuid });
+
+    if (!user) {
+      user = await new User({
+        uuid: req.body.uuid,
+      });
+      await user.save();
+    }
+
+    const foo = await User.updateOne(
+      { uuid: req.body.uuid },
+      {
+        $push: {
+          favorites: {
+            name: req.body.dispensary.name,
+            display_address: req.body.dispensary.location.display_address.join(
+              ", "
+            ),
+            display_phone: req.body.dispensary.display_phone,
+            is_open: !req.body.dispensary.is_closed,
+            rating: req.body.dispensary.rating,
+          },
+        },
+      }
+    );
+    res.status(200).send("Saved!");
   } catch (err) {
     res.status(400).json({
       status: 400,
       message: err.message,
-      
     });
   }
-  console.log(error.response);
 });
 
 // GET - /api/dispensary/:id
