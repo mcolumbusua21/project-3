@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
 const Favorite = require("../../models/favorite");
+// import { useAuth } from ("../../client/src/contexts/AuthContext")
 
 router.get("/", async ({ query }, res) => {
   const { location, limit } = query;
@@ -32,6 +33,7 @@ router.get("/", async ({ query }, res) => {
 
 //favorties route
 router.post("/db", async (req, res) => {
+  
   const favorite = new Favorite({
     name: req.body.name,
     address: req.body.display_address,
