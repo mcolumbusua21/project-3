@@ -1,10 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-<<<<<<< HEAD
-import { FcLike } from 'react-icons/fc';
-=======
 import { FcLike } from "react-icons/fc";
->>>>>>> 6758db5ea1d446a9e4ec541a412d56042cb4ea92
 // import { useStoreContext } from "../../utils/GlobalState";
 import { useAuth } from "../../contexts/AuthContext";
 // import API from "../../utils/API";
@@ -26,10 +22,6 @@ function DispensaryCard({
   return (
     <Card>
       <Card.Body>
-<<<<<<< HEAD
-        <Card.Title style={{fontFamily:'Permanent Marker'}}>{name} 
-        {currentUser && <FcLike href="/favorites" ></FcLike>}
-=======
         <Card.Title
           // onClick={handleInputChange}
           style={{ fontFamily: "Permanent Marker" }}
@@ -51,7 +43,6 @@ function DispensaryCard({
               }
             />
           )}
->>>>>>> 6758db5ea1d446a9e4ec541a412d56042cb4ea92
         </Card.Title>
         <Card.Text>
           {location.display_address.join(", ")} {display_phone}
