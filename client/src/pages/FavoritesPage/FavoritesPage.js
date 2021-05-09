@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
 // import DeleteBtn from "../components/DeleteBtn";
-// import { REMOVE_FAVORITE, LOADING} from "../../utils/actions";
+import { REMOVE_FAVORITE, LOADING} from "../../utils/actions";
 // import List from "../../components/List"
 // import { Link } from "react-router-dom"
-// import { useStoreContext} from "../../utils/GlobalState"
+import { useStoreContext} from "../../utils/GlobalState"
 import './FavoritesPage.css'
 import { setFavorite } from "../../utils/API";
 

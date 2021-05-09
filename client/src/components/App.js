@@ -13,22 +13,13 @@ import ProfilePage from "../pages/ProfilePage";
 import FavoritesPage from "../pages/FavoritesPage";
 
 function App() {
-  // const addFavorite = () => {
-  //   // dispatch({
-  //   //   type: ADD_FAVORITE,
-  //   //   post: state.currentPost
-  //   // });
-  // };
-
   return (
-    <div>
       <Router>
         <AuthProvider>
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <PrivateRoute path="/update-profile" component={UpdateProfile} />
             <Route path="/signup" component={SignUp} />
-            <Route path="/login" component={Login} />
             <Route path="/forgot-password" component={ForgotPassword} />
             {/* <Route path="/search-results" component={SearchResultsPage} /> */}
             <Route path="/profile" component={ProfilePage} />
@@ -36,8 +27,7 @@ function App() {
           </Switch>
         </AuthProvider>
       </Router>
-    </div>
-  );
+      )
 }
 
 export default App;
