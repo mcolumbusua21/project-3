@@ -9,7 +9,7 @@
       transparent,
       transparent
       ),
-      url('../../assets/images/store.jpg');
+      url("../../assets/images/store.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
