@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
+const Favorite = require("../../models/favorite");
 const User = require("../../models/User");
 // import { useAuth } from ("../../client/src/contexts/AuthContext")
 
@@ -69,6 +70,22 @@ router.post("/favorite", async (req, res) => {
     });
   }
 });
+
+router.get("/favorite", async (req, res) => {
+  try{
+    let userFav = await User.find();
+    console.log(userFav)
+
+    res.send(userFav)
+  }
+  catch (err) {
+    res.status(400).json({
+      status: 400, 
+      message: err.message,
+    });
+  }
+});
+
 
 // GET - /api/dispensary/:id
 // Retrieves data for a single dispensary
