@@ -22,7 +22,7 @@ app.use(express.static("public"));
 app.use("/", require("./routes"));
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/favorite_db", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://stephanie:8385tas@cluster0.s3qz3.mongodb.net/favorite_db?retryWrites=true&w=majority", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
