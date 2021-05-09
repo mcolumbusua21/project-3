@@ -14,7 +14,7 @@ export const singleDispensary = (id) => {
 };
 
 export const setFavorite = () => {
-  return axios.get("/api/favorites");
+  return axios.get("/api/dispensary/favorite");
 };
 
 export const addToFavorite = ({ uuid, dispensary }) => {
