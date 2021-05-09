@@ -1,28 +1,28 @@
 import React from 'react'
 // import DeleteBtn from "../components/DeleteBtn";
-// import { REMOVE_FAVORITE, LOADING} from "../../utils/actions";
+import { REMOVE_FAVORITE, LOADING} from "../../utils/actions";
 // import List from "../../components/List"
 // import { Link } from "react-router-dom"
-// import { useStoreContext} from "../../utils/GlobalState"
+import { useStoreContext} from "../../utils/GlobalState"
 import './FavoritesPage.css'
 
 const FavoritesPage = () => {
-//     const [state, dispatch] = useStoreContext();
+    const [state, dispatch] = useStoreContext();
 
-//     const getFavorites = () => {
-//       dispatch({ type: LOADING });
-//     };
+    const getFavorites = () => {
+      dispatch({ type: LOADING });
+    };
 
-// const removeFavorites = id => {
-//     dispatch({
-//       type: REMOVE_FAVORITE,
-//       _id: id
-//     });
-//   };
+const removeFavorites = id => {
+    dispatch({
+      type: REMOVE_FAVORITE,
+      _id: id
+    });
+  };
 
-//   useEffect(() => {
-//     getFavorites();
-//   }, []);
+  // useEffect(() => {
+  //   getFavorites();
+  // }, []);
 
   return (
     <div className="container mb-5 mt-5">
