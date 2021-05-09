@@ -32,6 +32,20 @@ router.get("/", async ({ query }, res) => {
   }
 });
 
+router.get("/favorite", async (req, res) => {
+  try{
+    let userFav = await User.find();
+    console.log(userFav)
+    res.json(userFav)
+  }
+  catch (err) {
+    res.status(400).json({
+      status: 400,
+      message: err.message,
+    });
+  }
+});
+
 //favorties route
 // POST - /api/dispensary/favorite
 router.post("/favorite", async (req, res) => {
