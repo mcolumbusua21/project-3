@@ -4,8 +4,10 @@ import React, {useEffect} from 'react'
 // import List from "../../components/List"
 // import { Link } from "react-router-dom"
 // import { useStoreContext} from "../../utils/GlobalState"
+
 import './FavoritesPage.css'
 import { setFavorite } from "../../utils/API";
+
 
 const FavoritesPage = () => {
     // const [state, dispatch] = useStoreContext();
@@ -21,12 +23,14 @@ const FavoritesPage = () => {
 //     });
 //   };
 
-  useEffect(() => {
-    // console.log(setFavorite());
-    setFavorite().then(data => {
-      console.log(data);
-    });
-  }, []);
+
+// THIS IS COMMENTED OUT UNTIL FULLY FILLED OUT, THROWING ERRORS TO OPEN UP THE PAGE IN THE BROWSER-SB
+  // useEffect(() => {
+  //   // console.log(setFavorite());
+  //   setFavorite().then(data => {
+  //     console.log(data);
+  //   });
+  // }, []);
 
   return (
     <div className="container mb-5 mt-5">
