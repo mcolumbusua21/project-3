@@ -84,6 +84,23 @@ router.post("/favorite", async (req, res) => {
   }
 });
 
+// router.delete("/favorite", (req,res) => {
+//   try{
+//     User.findById(req.params.id)
+//     .then(user => user.remove().then(() =>res.json({success:true})))
+//   }catch(err){
+//      res.status(404).json({success:false})
+// }
+
+
+
+
+module.exports = router;
+
+
+
+
+
 // GET - /api/dispensary/:id
 // Retrieves data for a single dispensary
 // router.get("/:id", async ({ params: { id } }, res) => {
@@ -106,5 +123,3 @@ router.post("/favorite", async (req, res) => {
 //     res.status(400).json(err);
 //   }
 // });
-
-module.exports = router;
