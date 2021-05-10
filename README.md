@@ -24,7 +24,7 @@ With all that in mind, dispensaries offering a variety of goods and services are
 
 ## Deployment Link
 
-THC ;)
+[Heroku Deployment](https://git.heroku.com/celp-13.git)
 
 ## Wireframe
 
