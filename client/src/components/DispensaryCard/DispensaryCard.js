@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import { FcLike } from "react-icons/fc";
 // import { useStoreContext } from "../../utils/GlobalState";
 import { useAuth } from "../../contexts/AuthContext";
@@ -18,14 +18,15 @@ function DispensaryCard({
   const { currentUser } = useAuth();
 
   return (
-    <Card>
-      <Card.Body>
-        <Card.Title
+    <Card border="secondary" className="mb-4">
+      <Card.Body className="p-0">
+        <Card.Title className="bg-success"
           // onClick={handleInputChange}
           style={{ fontFamily: "Permanent Marker" }}
         >
-          {name}
-          {currentUser && (
+           <Row>
+    <Col sm={8} className="ml-2 mt-2 mb-2">{name}</Col>
+    <Col sm={3} className="">{currentUser && (
             <FcLike
               onClick={() =>
                 favorite({
@@ -40,12 +41,26 @@ function DispensaryCard({
                 })
               }
             />
-          )}
+          )}</Col>
+  </Row>
+          
+          
         </Card.Title>
-        <Card.Text>
-          {location.display_address.join(", ")} {display_phone}
+        <Card.Text className="ml-2">
+          {location.display_address.join(", ")} 
+        </Card.Text>
+        <Card.Text className="ml-2">
+          {display_phone}
+          
+        </Card.Text>
+        <Card.Text className="ml-2">
+          
           {is_closed}
-          {rating}
+          
+        </Card.Text>
+        <Card.Text className="ml-2">
+          
+          Yelp Rating: {rating}
         </Card.Text>
       </Card.Body>
     </Card>
