@@ -33,7 +33,7 @@ const FavoritesPage = () => {
 
 
   return (
-    <div>
+    <div className='page'>
       <Navbar />
       <Hero>
         <h1 className="text-center">Here's Your Favorite Dispensaries</h1>

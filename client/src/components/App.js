@@ -6,7 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
-import UpdateProfile from "./UpdateProfile";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import ProfilePage from "../pages/ProfilePage";
 import FavoritesPage from "../pages/FavoritesPage";
 
