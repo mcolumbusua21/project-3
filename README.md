@@ -31,6 +31,13 @@ With all that in mind, dispensaries offering a variety of goods and services are
 [Figma](https://www.figma.com/file/7RZH5TiqERMhoe66QA451y/Wireframing-in-Figma?node-id=111%3A730)<br>
 ![Screen Shot 2021-04-30 at 1 56 00 PM](https://user-images.githubusercontent.com/78819536/116753802-85488400-a9bc-11eb-9757-5f7de4b4fe9e.png)
 
+## Photos
+![Screen Shot 2021-05-10 at 8 11 55 AM](https://user-images.githubusercontent.com/78819536/117684051-7b1b4800-b169-11eb-88a2-2e5a3bf98c8a.png)
+
+![Screen Shot 2021-05-10 at 8 29 27 AM](https://user-images.githubusercontent.com/78819536/117684200-9e45f780-b169-11eb-9227-f9e24df7e9a8.png)
+
+![Screen Shot 2021-05-10 at 8 29 55 AM](https://user-images.githubusercontent.com/78819536/117684267-aef66d80-b169-11eb-9c61-e1ca854ae230.png)
+
 ## License
 
 This project is licensed under the ${data.license} license.

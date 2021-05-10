@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col} from "react-bootstrap";
 import { FcLike } from "react-icons/fc";
 // import { useStoreContext } from "../../utils/GlobalState";
 import { useAuth } from "../../contexts/AuthContext";
@@ -27,7 +27,7 @@ function DispensaryCard({
            <Row>
     <Col sm={8} className="ml-2 mt-2 mb-2">{name}</Col>
     <Col sm={3} className="">{currentUser && (
-            <FcLike
+           <FcLike 
               onClick={() =>
                 favorite({
                   uuid: currentUser.uid,
