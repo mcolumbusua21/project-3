@@ -18,7 +18,6 @@ function DispensaryCard({
   const { currentUser } = useAuth();
 
   console.log(currentUser.uid);
-
   return (
     <Card>
       <Card.Body>

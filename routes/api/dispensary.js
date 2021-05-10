@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
+const Favorite = require("../../models/favorite");
 const User = require("../../models/User");
 // import { useAuth } from ("../../client/src/contexts/AuthContext")
 
@@ -84,6 +85,7 @@ router.post("/favorite", async (req, res) => {
   }
 });
 
+
 // router.delete("/favorite", (req,res) => {
 //   try{
 //     User.findById(req.params.id)
@@ -93,12 +95,7 @@ router.post("/favorite", async (req, res) => {
 // }
 
 
-
-
 module.exports = router;
-
-
-
 
 
 // GET - /api/dispensary/:id

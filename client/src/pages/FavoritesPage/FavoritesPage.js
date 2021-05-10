@@ -9,8 +9,11 @@ import Hero from "../../components/Hero";
 // import List from "../../components/List"
 // import { Link } from "react-router-dom"
 
+
+
 const FavoritesPage = () => {
   const [favorite, setFavorite] = useState([]);
+
 
   useEffect(() => {
     const getFavorite = async () => {
@@ -27,6 +30,7 @@ const FavoritesPage = () => {
   //       _id: id
   //     });
   //   };
+
 
   return (
     <div className="container mb-5 mt-5">
