@@ -28,11 +28,17 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://stephanie:8385tas@clu
   useCreateIndex: true,
 });
 
-app.get("/", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/client/build/index.html');
+  });
+}
+// app.get("/", function (req, res) {
+// //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// // });
+//   res.sendFile(path.join(__dirname + "./client/public"));
 // });
-  res.sendFile(path.join(__dirname + "./client/public"));
-});
 
 
 // Start the API server

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import "./FavoritesPage.css";
 import { saveFavorite } from "../../utils/API";
-import { ListGroup, Card } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 import Hero from "../../components/Hero";
 // import DeleteBtn from "../components/DeleteBtn";
 // import { REMOVE_FAVORITE, LOADING } from "../../utils/actions";
@@ -33,7 +33,7 @@ const FavoritesPage = () => {
 
 
   return (
-    <div>
+    <div className='page'>
       <Navbar />
       <Hero>
         <h1 className="text-center">Here's Your Favorite Dispensaries</h1>
