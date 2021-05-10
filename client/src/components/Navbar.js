@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navbar, Nav, Button, Alert, Image } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
-
+import celp from "../../src/assets/images/CELP.png";
 
 function Navbarfunction() {
   const { currentUser, logout } = useAuth();
@@ -16,7 +16,7 @@ function Navbarfunction() {
       await logout();
       history.push("/");
     } catch {
-      setError("Failed to log out");      
+      setError("Failed to log out");
     }
   }
 
@@ -27,30 +27,101 @@ function Navbarfunction() {
       variant="dark"
       className="d-flex justify-content-between"
     >
-      <Navbar.Brand style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'40px' }} href="#home">
-      <Image src={process.env.PUBLIC_URL + "../images/CELP.png"}/>
+      <Navbar.Brand
+        style={{
+          color: "yellow",
+          fontFamily: "Permanent Marker",
+          fontSize: "40px",
+        }}
+        href="#home"
+      >
+        <img
+          src={celp}
+          width="100"
+          height="100"
+          className="d-inline-block align-top"
+        />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav " />
       <Navbar.Collapse
         id="basic-navbar-nav"
         className="d-flex justify-content-end"
         style={{ maxWidth: "fit-content" }}
-        color= "yellow"
+        color="yellow"
       >
         <Nav>
           {error && <Alert variant="danger"> {error} </Alert>}
-          <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/">Home</Nav.Link>
-          {currentUser && <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/favorites">Favorites</Nav.Link>}
-          {currentUser && <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/profile">Profile</Nav.Link>}
-          {!currentUser && <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/signup">Create an Account</Nav.Link>}
+          <Nav.Link
+            style={{
+              color: "yellow",
+              fontFamily: "Permanent Marker",
+              fontSize: "20px",
+            }}
+            href="/"
+          >
+            Home
+          </Nav.Link>
+          {currentUser && (
+            <Nav.Link
+              style={{
+                color: "yellow",
+                fontFamily: "Permanent Marker",
+                fontSize: "20px",
+              }}
+              href="/favorites"
+            >
+              Favorites
+            </Nav.Link>
+          )}
+          {currentUser && (
+            <Nav.Link
+              style={{
+                color: "yellow",
+                fontFamily: "Permanent Marker",
+                fontSize: "20px",
+              }}
+              href="/profile"
+            >
+              Profile
+            </Nav.Link>
+          )}
+          {!currentUser && (
+            <Nav.Link
+              style={{
+                color: "yellow",
+                fontFamily: "Permanent Marker",
+                fontSize: "20px",
+              }}
+              href="/signup"
+            >
+              Create an Account
+            </Nav.Link>
+          )}
           {!currentUser ? (
-            <Nav.Link style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} href="/login">Log In</Nav.Link>
+            <Nav.Link
+              style={{
+                color: "yellow",
+                fontFamily: "Permanent Marker",
+                fontSize: "20px",
+              }}
+              href="/login"
+            >
+              Log In
+            </Nav.Link>
           ) : (
-            <Button style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'20px' }} variant="link" onClick={handleLogout}>
+            <Button
+              style={{
+                color: "yellow",
+                fontFamily: "Permanent Marker",
+                fontSize: "20px",
+              }}
+              variant="link"
+              onClick={handleLogout}
+            >
               Log Out
             </Button>
           )}
-          </Nav>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
