@@ -2,9 +2,6 @@
 ___
 
 
-
-${license}
-
 ## Description
 
 Search for dispensaries around your current location. Useful if you are looking to try a new place or if you are travelling. 
@@ -27,7 +24,7 @@ With all that in mind, dispensaries offering a variety of goods and services are
 
 ## Deployment Link
 
-THC ;)
+[Heroku Deployment](https://git.heroku.com/celp-13.git)
 
 ## Wireframe
 
@@ -48,17 +45,20 @@ Contributers to this app are:
 <br>
 [Stephanie Zavala](https://github.com/spicystephy)
 <br>
+[Tucker Beauchamp](https://github.com/tuckerbeauchamp)
+<br>
+<br>
 [Google Doc of Tasks Breakdown](https://docs.google.com/document/d/1tAD1KwtoCyzoq_X_AmLXf6YyYxuaQH5l9QK4ag-2QTs/edit?ts=608b1ea8) 
 <br>
 If you have any questions about the repo, open an issue, contact us directly by clicking on our names above. You can find more of our work there.
 
 ## Technologies Used
 
-This app was created with ReactJS.
+This app was created with ReactJS, MongoDB, Express, Node.js.
 <br>
-API's used:<br>
+API used:
 [Yelp](https://www.yelp.com/developers/documentation/v3)
 <br>
-Framework from [Bulma](https://bulma.io/documentation/)
+Framework: [React Bootstrap](https://react-bootstrap.github.io/)
 <br>
-Authentication provided by [Firebase](https://firebase.google.com/)
+Authentication: [Firebase](https://firebase.google.com/)

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Button, Alert } from "react-bootstrap";
+import { Navbar, Nav, Button, Alert, Image } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
 
@@ -28,7 +28,7 @@ function Navbarfunction() {
       className="d-flex justify-content-between"
     >
       <Navbar.Brand style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'40px' }} href="#home">
-        Celp 
+      <Image src={process.env.PUBLIC_URL + "../images/CELP.png"}/>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav " />
       <Navbar.Collapse
