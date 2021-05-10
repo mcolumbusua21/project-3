@@ -24,7 +24,7 @@ function Dashboard() {
     try {
       // const uuid = {data};
       // const dispensary = {data};
-      const { data } = await addToFavorite({
+     await addToFavorite({
         uuid,
         dispensary,
       });

@@ -11,10 +11,15 @@ const PORT = process.env.PORT || 3002;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/client/build/index.html');
+  });
 }
-
 app.use(logger("dev"));
 app.use(express.static("public"));
 
@@ -28,12 +33,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://stephanie:8385tas@clu
   useCreateIndex: true,
 });
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/client/build/index.html');
-  });
-}
+
 // app.get("/", function (req, res) {
 // //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // // });
