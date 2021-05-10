@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import "./FavoritesPage.css";
 import { saveFavorite } from "../../utils/API";
-import { ListGroup, Card } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 import Hero from "../../components/Hero";
 // import DeleteBtn from "../components/DeleteBtn";
 // import { REMOVE_FAVORITE, LOADING } from "../../utils/actions";
@@ -38,7 +38,8 @@ const FavoritesPage = () => {
       <Hero>
         <h1 className="text-center">Here's Your Favorite Dispensaries</h1>
       </Hero>
-      <ListGroup border="secondary" className="mb-4 ">
+      <ListGroup as="ul"> 
+        <ListGroup.Item as="li" border="secondary" className="mb-4"> 
       <div className="favorite-list d-flex justify-content-center">
           {favorite
             .sort((a, b) => {
@@ -51,13 +52,13 @@ const FavoritesPage = () => {
               return 0;
             })
             .map((favoriteIndex) => (
-              <div key={favoriteIndex.id} className=" border border-secondary mt-3 mb-3 has-text-center">
-                <h4 className="p-2" style={{ color: "black", backgroundColor: "green" }}>
-                  {favoriteIndex.name}</h4> 
-                  <h5 className="p-2">{favoriteIndex.display_address} </h5>
-                  <h5 className="p-2">{favoriteIndex.display_phone} </h5> 
+              <div key={favoriteIndex.id} className=" border border-secondary mt-3 mb-3 ml-3 mr-3 has-text-center">
+                <p className="p-2" style={{ color: "black", backgroundColor: "green" }}>
+                  {favoriteIndex.name}</p> 
+                  <p className="p-2">{favoriteIndex.display_address} </p>
+                  <p className="p-2">{favoriteIndex.display_phone} </p> 
                   {/* <h5 className="p-2">{favoriteIndex.is_open_} </h5> */}
-                  <h5 className="p-2">Rating: {favoriteIndex.rating}</h5>
+                  <p className="p-2">Yelp Rating: {favoriteIndex.rating}</p>
                
               </div>
             ))
@@ -65,7 +66,7 @@ const FavoritesPage = () => {
             //   return favoriteName.indexOf(favorite.name)
             // })
             }
-        </div> 
+        </div> </ListGroup.Item>
       </ListGroup>
     </div>
   );

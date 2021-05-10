@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Button, Alert, Image } from "react-bootstrap";
+import { Navbar, Nav, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { useHistory } from "react-router-dom";
+import celp from "../../src/assets/images/2.png"
 
 
 function Navbarfunction() {
@@ -28,7 +29,11 @@ function Navbarfunction() {
       className="d-flex justify-content-between"
     >
       <Navbar.Brand style={{ color: "yellow", fontFamily:'Permanent Marker', fontSize:'40px' }} href="#home">
-      <Image src={process.env.PUBLIC_URL + "../images/CELP.png"}/>
+      <img src={celp}
+      width="200"
+      height="200"
+      alt="business logo"
+      className="d-inline-block-align-top" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav " />
       <Navbar.Collapse
