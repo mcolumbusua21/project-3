@@ -17,7 +17,6 @@ function DispensaryCard({
   // const [state, dispatch] = useStoreContext();
   const { currentUser } = useAuth();
 
-  console.log(currentUser.uid);
   return (
     <Card>
       <Card.Body>

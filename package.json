@@ -10,11 +10,9 @@
     "build": "cd client && npm run build",
     "install": "cd client && npm i",
     "server": "nodemon server.js",
-    "client":"cd client && npm start",
+    "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm run build"
-    
-
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
