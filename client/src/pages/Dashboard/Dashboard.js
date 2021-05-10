@@ -3,11 +3,11 @@ import { Col, Row, ListGroup } from "react-bootstrap";
 import Hero from "../../components/Hero";
 import Form from "../../components/Form";
 import DispensaryCard from "../../components/DispensaryCard";
-import { getDispensaries} from "../../utils/API";
+import { getDispensaries, addToFavorite } from "../../utils/API";
 import Navbar from "../../components/Navbar";
 
 function Dashboard() {
-  const [ dispensaries, setDispensaries] = useState([]);
+  const [dispensaries, setDispensaries] = useState([]);
   const [location, setLocation] = useState("");
 
   async function handleFormSubmit(e) {
@@ -21,12 +21,12 @@ function Dashboard() {
   }
 
   async function favorite({ uuid, dispensary }) {
-    try{
+    try {
       // const uuid = {data};
       // const dispensary = {data};
       const { data } = await addToFavorite({
-       uuid,
-       dispensary,
+        uuid,
+        dispensary,
       });
     } catch (err) {
       console.log(err);

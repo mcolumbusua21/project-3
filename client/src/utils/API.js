@@ -13,7 +13,7 @@ export const singleDispensary = (id) => {
   return axios.get("/api/dispensary/" + id);
 };
 
-export const setFavorite = () => {
+export const saveFavorite = () => {
   return axios.get("/api/dispensary/favorite");
 };
 
