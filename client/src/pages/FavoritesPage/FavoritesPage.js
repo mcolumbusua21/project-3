@@ -70,7 +70,7 @@ const FavoritesPage = () => {
 };
 
 export default FavoritesPage;
-{
+
   /* {state.favorites.length ? (
         <List>
           <h3 className="mb-5 mt-5">Click on a dispensary to view in detail</h3>
@@ -91,4 +91,4 @@ export default FavoritesPage;
       <div className="mt-5">
         <Link to="/">Back to home</Link>
       </div> */
-}
+
