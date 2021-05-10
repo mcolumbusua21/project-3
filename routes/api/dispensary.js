@@ -85,20 +85,17 @@ router.post("/favorite", async (req, res) => {
   }
 });
 
-router.get("/favorite", async (req, res) => {
-  try{
-    let userFav = await User.find();
-    console.log(userFav)
 
-    res.send(userFav)
-  }
-  catch (err) {
-    res.status(400).json({
-      status: 400, 
-      message: err.message,
-    });
-  }
-});
+// router.delete("/favorite", (req,res) => {
+//   try{
+//     User.findById(req.params.id)
+//     .then(user => user.remove().then(() =>res.json({success:true})))
+//   }catch(err){
+//      res.status(404).json({success:false})
+// }
+
+
+module.exports = router;
 
 
 // GET - /api/dispensary/:id
@@ -123,5 +120,3 @@ router.get("/favorite", async (req, res) => {
 //     res.status(400).json(err);
 //   }
 // });
-
-module.exports = router;
